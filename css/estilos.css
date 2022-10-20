@@ -1,0 +1,40 @@
+
+.titulo-empresa {
+    display: flex;
+    padding: 25px;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    position: center;
+    font-weight: normal;
+    font-family: 'Josefin Slab';
+    color: rgb(7, 7, 156);
+}
+
+.subtitulo{
+    display: flex;
+    padding: 20px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    position: center;
+    font-weight: normal;
+    font-family: 'Josefin Slab';
+    color: rgb(21, 21, 189);
+}
+
+.boton-solicitar {
+    padding: 12px 25px;
+    background-color: rgb(39, 183, 219);
+    border-radius: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: 'Josefin Slab', serif;
+    text-transform: uppercase;
+}
+
+.boton-solicitar:hover {
+    background-color: #400ce8db;
+    color: rgba(255, 254, 254, 0.829)
+}
