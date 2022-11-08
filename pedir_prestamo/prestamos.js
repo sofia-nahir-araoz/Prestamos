@@ -1,12 +1,4 @@
 
-class Usuario{
-
-    constructor (nombre, documento){
-        this.nombre = nombre;
-        this.documento = documento;
-    }
-
-}
 
 let usuarios_credisur = [
     {nombre:"Sofia", documento:38330111},
@@ -27,23 +19,6 @@ while (nombre != "salir"){
 
 let nuevo_usuario = new Usuario (nombre, documento);
 
-
-
-let usuario_encontrado = usuarios_credisur.find(usuario=> usuario.documento == nuevo_usuario.documento);
-
-if(
-
-    usuario_encontrado){
-
-        console.log("Se encontro usuario con documento:", usuario_encontrado.documento , "Usted ya posee un credito, no puede solicitar otro.");
-    }
-
-else{
-
-pedir_prestamo(nuevo_usuario)
-
-} 
-    }
 
 }
 
