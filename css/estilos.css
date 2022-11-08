@@ -1,4 +1,7 @@
 
+
+
+
 .titulo-empresa {
     display: flex;
     padding: 25px;
@@ -37,4 +40,41 @@
 .boton-solicitar:hover {
     background-color: #400ce8db;
     color: rgba(255, 254, 254, 0.829)
+}
+
+
+.lista__links{
+    padding: 0 10px;
+    background-color: transparent;
+    text-transform: uppercase;
+    
+}
+.lista__links a{
+    color: rgb(0, 2, 1);
+}
+.lista__links :hover{
+color: rgb(190, 14, 82);
+}
+.lista__links--activo a{
+    color: rgb(248, 240, 245);
+}
+
+.footer-grid{
+    background-color: rgb(246, 239, 239);
+    color: rgb(10, 1, 62);
+    padding: 20px 10px;
+    background-image: url(../assets/bluebanner2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 2rem;
+}
+
+.footer-grid .nav__lista {
+    display: grid;
+    grid-template-columns: repeat(4,0fr);
+    grid-template-rows: repeat(1,0fr);
+}
+
+.footer-grid .nav__lista {
+    grid-template-columns: repeat(4,1fr);
 }
