@@ -14,7 +14,7 @@ function calcular_interes(){
 
     let monto_total = interes_calculado + monto_a_solicitar
 
-    monto_total_html.querySelector ("h6").innerText = "Usted solicitó $ "+monto_a_solicitar + " Con un Plazo de Devolucion de "+plazo_devolucion+ " dias. El monto total solicitado incluido el interes, seria $" + monto_total + "."
+    monto_total_html.querySelector ("h6").innerText = "Usted desea solicitar $ "+monto_a_solicitar + " Con un Plazo de Devolución de "+plazo_devolucion+ " dias. El monto total  incluido el interes, seria $" + monto_total + "."
 
     monto_total_html.style.display = "block";
 
