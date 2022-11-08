@@ -8,7 +8,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/estilos.css">
+        <link rel="stylesheet" href="../css/estilos.css">
         <title>Proyecto Prestamos CrediSur</title>
 
 </head>
@@ -17,21 +17,36 @@
     <h1 class="titulo-empresa">CREDI-SUR</h1>
     <h2 class="subtitulo">Prestamos Personales</h2>
 
-    <label for=""> Monto solicitado: $ </label>
-    <input type="number">
-    <p>
-        <label for="">Plazos de Devolucion</label>
-        <select name="" id="">
 
-            <option value="">90 dias</option>
-            <option value="">120 dias</option>
-            <option value="">365 dias</option>
-        </select>
-    </p>
+<form>
+    <div class="mb-3">
+        <label for="monto_a_solicitar" class="form-label">Monto a Solicitar</label>
+        <input type="number" class="form-control" id="monto_a_solicitar" aria-describedby="numberlHelp">
+        <div id="numberHelp" class="form-text">Ingresar valor numerico sin signos.</div>
+    </div>
+    
+    <label for="plazo_devolucion" class="form-label">Plazo de Devolucion</label>
+    <select id="plazo_devolucion" class="form-select form-select-sm" aria-label=".form-select-sm example">
+        
+        <option value="90">90 Dias</option>
+        <option value="120">120 Dias</option>
+        <option value="365">365 Dias</option>
+    </select>
+    </form>
 
-    <button class="boton-solicitar">SOLICITAR</button>
+    
+    <div class="d-grid gap-2 col-6 mx-auto mt-3">
+        <button id="calcular_boton" class="btn btn-primary" type="button">Calcular</button>
+</div>
 
-    <script src="prestamos.js"></script>
+    <div class="hidden" id="monto_total">
+        <h6>El interes calculado es de $....</h6>
+
+    <div class="d-grid gap-2 col-6 mx-auto mt-3">
+        <button id="solicitud_prestamo_ok" class="btn btn-primary" type="button">Solicitar</button>
+</div>
+</div>
+
 
 </body>
 
@@ -43,18 +58,18 @@
             <ul class="nav__lista">
                 <li class="lista__links">
                     <a href="https://www.instagram.com" target="_blank">
-                        <img src="./assets/insta.png" alt="Instagram" width="50px"> </a>
+                        <img src="../assets/insta.png" alt="Instagram" width="50px"> </a>
                 </li>
                 <li class="lista__links">
-                    <a href="https://es-la.facebook.com/" target="_blank"> <img src="./assets/facebook.png"
+                    <a href="https://es-la.facebook.com/" target="_blank"> <img src="../assets/facebook.png"
                             alt="Facebook" width="50px"></a>
                 </li>
                 <li class="lista__links">
-                    <a href="https://twitter.com/?lang=es" target="_blank"> <img src="./assets/twitter.png"
+                    <a href="https://twitter.com/?lang=es" target="_blank"> <img src="../assets/twitter.png"
                             alt="Twitter" width="50px"></a>
                 </li>
                 <li class="lista__links">
-                    <a href="https://www.whatsapp.com/?lang=es" target="_blank"> <img src="./assets/wsp.png"
+                    <a href="https://www.whatsapp.com/?lang=es" target="_blank"> <img src="../assets/wsp.png"
                             alt="WhatsApp" width="50px"></a>
                 </li>
             </ul>
@@ -64,5 +79,6 @@
         </articulo>
     </section>
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.5/dist/sweetalert2.all.min.js"></script>
+<script src="prestamos.js"></script>
 </html>

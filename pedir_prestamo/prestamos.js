@@ -1,83 +1,52 @@
 
 
-let usuarios_credisur = [
-    {nombre:"Sofia", documento:38330111},
-    {nombre:"Lautaro", documento:38646494}
-] 
+function calcular_interes(){
 
-
-let nombre 
-
-
-while (nombre != "salir"){
-
-    nombre = prompt ("Ingrese su nombre, para finalizar escriba: salir ");
-
-    if(nombre != "salir"){
-
-        let documento = prompt ("Ingrese su numero de documento");
-
-let nuevo_usuario = new Usuario (nombre, documento);
-
-
-}
-
-
-function pedir_prestamo(nuevo_usuario){
-
-    let nacimiento_usuario = prompt ("Ingrese su año de nacimiento");
-
-
-while (nacimiento_usuario >= 2004 || nacimiento_usuario <= 1957){
-
-    console.log("No puede solicitar un prestamo ya que no cumple con los requisitos. Intentelo nuevamente.");
-    nacimiento_usuario = prompt ("Ingrese su año de nacimiento");
-
-}
-console.log("Bienvenido a CrediSur, Prestamos Personales");
-
-
-let monto_solicitado = parseFloat (monto_valido());
-console.log("Solicitaste: $" , monto_solicitado);
-
-let plazo_devolucion = parseInt (plazo_valido());
-console.log("Usted Seleccionó: " , plazo_devolucion, "dias para su devolución.");
-
-
-let interes = interes_prestamo(monto_solicitado , plazo_devolucion);
-console.log ("Usted solicitó: $",monto_solicitado,"El total a devolver, incluyendo el interes, será de: $", (monto_solicitado + interes), "en un plazo de:",plazo_devolucion,"dias"); 
-
-
-usuarios_credisur.push(nuevo_usuario)
-
-}
-
-
-function monto_valido (){
-
-    let monto_ingresado = parseFloat (prompt("Ingrese el monto que desea solicitar:"));
-    while ( typeof monto_ingresado != "number"){
-
+    let monto_a_solicitar = parseInt (document.getElementById("monto_a_solicitar").value);
     
-    console.log("El monto ingresado no es valido ya que no es numerico. Intentelo nuevamente.");
-    monto_ingresado = parseFloat(prompt("Ingrese el monto que desea solicitar:"));
-    
-}
-return monto_ingresado
-}
+    let plazo_devolucion = parseInt (document.getElementById("plazo_devolucion").value);
 
-function plazo_valido(){
+    debugger
 
-    let plazo_ingresado = parseFloat(prompt("Seleccione el plazo de devolucion: 90/120/365"));
-    
+    let interes_calculado = interes_prestamo (monto_a_solicitar, plazo_devolucion);
 
-    while (plazo_ingresado != 90 && plazo_ingresado != 120 && plazo_ingresado != 365){
-        console.log("Ese plazo de Devolucion es inexistente. Intentelo nuevamente.");
-        plazo_ingresado = parseFloat(prompt("Seleccione el plazo de devolucion: 90/120/365"));
-    }
-    return plazo_ingresado
+    let monto_total_html = document.getElementById ("monto_total");
+
+    let monto_total = interes_calculado + monto_a_solicitar
+
+    monto_total_html.querySelector ("h6").innerText = "Usted solicitó $ "+monto_a_solicitar + " Con un Plazo de Devolucion de "+plazo_devolucion+ " dias. El monto total solicitado incluido el interes, seria $" + monto_total + "."
+
+    monto_total_html.style.display = "block";
+
 
 }
+
+function mostar_cartel_solicitud (){
+
+
+    swal.fire ({
+        icon: "success",
+        title:"Su prestamo fue aprobado!",
+        text: "Su prestamo fue aprobado. Pronto recibiras por e-mail los requisitos a seguir. Gracias por confiar en Credi-Sur.",
+        footer:"",
+        showClass:{
+            popup:'animate_animated animate_bounceInRigth'
+        },
+        hidenClass:{
+            popup: 'animate_animated animate_hinge'
+        }
+    })
+
+
+    setTimeout(()=>{
+        window.location.href ='../index.html';
+    },5000);
+}
+
+
+
+
+
 
 function interes_prestamo (monto_solicitado , plazo_devolucion){
 
@@ -97,4 +66,12 @@ function interes_prestamo (monto_solicitado , plazo_devolucion){
         interes = monto_solicitado * 0.60;
         return interes
     }}
+
+    let boton = document.getElementById ("calcular_boton");
+
+    boton.addEventListener("click", calcular_interes);
+
+    let boton2 = document.getElementById ("solicitud_prestamo_ok");
+
+    boton2.addEventListener("click", mostar_cartel_solicitud);
 
