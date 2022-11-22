@@ -1,39 +1,60 @@
 
-/*PARALLAX-INDEX*/
+/*Banner-INDEX*/
 .banner {
     height: 580px;
     width: 100%;
     background-image: url(../assets/dolar.jpg);
     background-size: cover;
     background-attachment: fixed;
+    
+}
+
+/*Banner REGISTRO*/
+.banner-registro {
+    height: 580px;
+    width: 100%;
+    background-image: url(../assets/registro.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/*Banner */
+.banner-prestamos {
+    height: 580px;
+    width: 100%;
+    background-image: url(../assets/otrorollo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .navbar-dark .navbar-nav .nav-link {
     color: black;
-  }
-  
-  .navbar-dark .navbar-nav .nav-link:hover {
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
     color: rgba(255, 254, 254, 0.829);
-  }
-  
-  .navbar-dark .navbar-nav .nav-link .active {
+}
+
+.navbar-dark .navbar-nav .nav-link .active {
     color: rgba(255, 254, 254, 0.829);
-  }
+}
 
 
 .nombre-empresa {
     color: rgb(241, 239, 244);
-  }
+}
 
-  .navbar {
-    background-color: rgba(0, 0, 0, 0.228);
+.navbar {
+    background-color: rgba(2, 37, 7, 0.153);
     font-size: 20px;
 
-  }
-  
-  .navbar-brand {
+}
+
+.navbar-brand {
     padding-left: 10px;
-  }
+}
+
 
 .lista__links{
     padding: 0 10px;
@@ -59,17 +80,30 @@ color: rgb(61, 14, 190);
     padding: 20px 10px;
     background-image: url(../assets/bluebanner2.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: initial;
     margin-top: 2rem;
+    
 }
 
+.registro-datos {
+    padding: 2rem;
+    margin: 0 8rem;
+}
+
+.registro-datos p label {
+    display: block;
+}
+
+.registro-datos {
+    margin: 0.3;
+}
 
 .footer-grid .nav__lista {
     display: grid;
     grid-template-columns: repeat(4, 0fr);
     grid-template-rows: repeat(1, 0fr); }
-  
-  .nav__lista {
+
+.nav__lista {
     display: flex;
     height: 80px;
     flex-direction: row;
@@ -92,7 +126,7 @@ color: rgb(61, 14, 190);
             display: block; }
 
             .h1, h1 {
-                font-size: calc(3rem + 1.5vw);
+                font-size: calc(2rem + 1.5vw);
             }
 
             
@@ -105,12 +139,16 @@ color: rgb(61, 14, 190);
     display: none;
 }
 
+.nombre-empresa-registro {
+    color: rgb(1, 1, 2);
+}
+
 .imagenes-centradas {
     display: flex;
     text-align: center;
     justify-content: center;
     margin-bottom: 2rem;
-  }
+}
 
 
 .conteiner-img-rigth {
@@ -124,6 +162,8 @@ color: rgb(61, 14, 190);
     animation-timing-function: ease-in;
     animation-delay: 2s;
     animation-iteration-count: 3;
+    opacity: 70%;
+    
 }
 
 .conteiner-img-rigth .text-left {
