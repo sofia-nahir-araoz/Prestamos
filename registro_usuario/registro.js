@@ -24,10 +24,15 @@ function registro_usuario (){
 
     let usuarios_credisur = JSON.parse(localStorage.getItem("Usuarios"));
 
-    let usuario_existe = usuarios_credisur.find(usuario=> usuario.dni == dni_ingresado);
+    let usuario_existe;
+
+    if (usuarios_credisur) {
+        usuario_existe = usuarios_credisur.find(usuario=> usuario.dni == dni_ingresado);
+    } else {
+        usuarios_credisur = [];
+    }
 
     if (usuario_existe){
-
         swal.fire ({
             icon: "warning",
             title:"Usuario Existente",
@@ -39,9 +44,7 @@ function registro_usuario (){
             hidenClass:{
                 popup: 'animate_animated animate_hinge'
             }
-        })
-
-        
+        });
     } 
     else {
         let edad =  new Date().getFullYear() - new Date(nacimiento_ingresado).getFullYear();
@@ -72,9 +75,7 @@ function registro_usuario (){
             },5000);
             
 
-        }
-
-        else{
+        } else {
 
             swal.fire ({
                 icon: "error",
@@ -89,10 +90,7 @@ function registro_usuario (){
                 }
             })
         }
-
     }
-
-
 }
 
 let boton = document.getElementById ("boton_registro_usuario");

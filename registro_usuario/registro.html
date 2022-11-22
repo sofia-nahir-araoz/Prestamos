@@ -48,11 +48,12 @@
 
     </div>
 
-    <form name="registro" method="post">
-        <fieldset class="registro-datos">
-            <legend>Hola, completa estos datos para registrarte:</legend>
-
-            <form>
+    <form class="m-4">
+        <div class="card  m-auto" style="max-width: 540px;">
+            <div class="card-header">
+                <h5 class="card-title">Hola, completa estos datos para registrarte:</h5>
+            </div>
+            <div class="card-body">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="nombre" placeholder="Juan">
@@ -86,12 +87,14 @@
                     <label for="password" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" id="password">
                 </div>
-            </form>
-            <div class="gap-2 col-6 mx-auto">
+            </div>
+            <div class="card-footer text-center">
                 <button id="boton_registro_usuario" class="btn btn-primary boton-prestamos" type="button">Crear
                     Usuario</button>
             </div>
-        </fieldset>
+        </div>
+
+    </form>
 </body>
 
 <footer class="footer-grid">

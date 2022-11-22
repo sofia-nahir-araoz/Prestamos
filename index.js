@@ -32,17 +32,27 @@ function validar_usuario (){
 
     let usuarios_credisur = JSON.parse(localStorage.getItem("Usuarios"));
 
-    let usuario_valido = usuarios_credisur.find(usuario=> usuario.dni == dni_usuario.value && usuario.password== password_usuario.value);
+    if (usuarios_credisur) {
+        let usuario_valido = usuarios_credisur.find(usuario=> usuario.dni == dni_usuario.value && usuario.password== password_usuario.value);
 
-    if(
-
-        usuario_valido){
-
-                window.location.href ='./pedir_prestamo/prestamo.html';
-        }
+        if(usuario_valido){
+                    window.location.href ='./pedir_prestamo/prestamo.html';
+        } else{
     
-    else{
-
+            swal.fire ({
+                icon: "error",
+                title:"Dni o Contraseña no validos.",
+                text: "El Dni o Contraseña no fueron encontrados. Intente nuevamente o Registrese",
+                footer:"",
+                showClass:{
+                    popup:'animate_animated animate_bounceInRigth'
+                },
+                hidenClass:{
+                    popup: 'animate_animated animate_hinge'
+                }
+            })
+        } 
+    } else {
         swal.fire ({
             icon: "error",
             title:"Dni o Contraseña no validos.",
@@ -54,10 +64,8 @@ function validar_usuario (){
             hidenClass:{
                 popup: 'animate_animated animate_hinge'
             }
-        })
-    
-    } 
-
+        });
+    }
 }
 
 let boton = document.getElementById ("inicio_sesion");
