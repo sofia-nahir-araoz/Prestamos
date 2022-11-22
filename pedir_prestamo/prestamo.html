@@ -7,21 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="../assets/pesos.png" type="image/x-icon">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Prestamos CrediSur</title>
-
 </head>
 
 <body>
 
     <div class="banner-prestamos">
-
-
-
-
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html">
@@ -43,85 +37,80 @@
                         <li class="nav-item">
                             <a class="nav-link " href="../registro_usuario/registro.html">REGISTRATE</a>
                         </li>
-
-
                     </ul>
                 </div>
             </div>
         </nav>
 
-
         <div>
             <h1 class="nombre-empresa h1"> Prestamos CREDISUR</h1>
         </div>
-        
-        </div>
 
+    </div>
+    <h2 class="text-center" style="margin: 3rem;"> ¡Prestamos Personales en el acto!</h2>
 
-
-
-
-        <h2 class="subtitulo"> Prestamos Personales en el acto!</h2>
-
-
-        <form>
-            <div class="mb-3">
-                <label for="monto_a_solicitar" class="form-label">Monto a Solicitar</label>
-                <input type="number" class="form-control" id="monto_a_solicitar" aria-describedby="numberlHelp">
-                <div id="numberHelp" class="form-text">Ingresar valor numerico sin signos.</div>
+    <form>
+        <div class="card  m-auto" style="max-width: 540px;">
+            <div class="card-header">
+                <h5 class="card-title">Ingresá los datos de la operación</h5>
             </div>
-
-            <label for="plazo_devolucion" class="form-label">Plazo de Devolucion</label>
-            <select id="plazo_devolucion" class="form-select form-select-sm" aria-label=".form-select-sm example">
-
-                <option value="90">90 Dias</option>
-                <option value="120">120 Dias</option>
-                <option value="365">365 Dias</option>
-            </select>
-        </form>
-
-
-        <div class="d-grid gap-2 col-6 mx-auto mt-3">
-            <button id="calcular_boton" class="btn btn-primary" type="button">Calcular</button>
-        </div>
-
-        <div class="hidden" id="monto_total">
-            <h6>El interes calculado es de $....</h6>
-
-            <div class="d-grid gap-2 col-6 mx-auto mt-3">
-                <button id="solicitud_prestamo_ok" class="btn btn-primary" type="button">Solicitar</button>
+            <div class="card-body">
+                <div class="mb-3 ">
+                    <label for="monto_a_solicitar" class="form-label">Monto a Solicitar</label>
+                    <input type="number" class="form-control" id="monto_a_solicitar" aria-describedby="numberlHelp">
+                    <div id="numberHelp" class="form-text">Ingresar valor numerico sin signos.</div>
+                </div>
+                <label for="plazo_devolucion" class="form-label">Plazo de Devolucion</label>
+                <select id="plazo_devolucion" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option value="90">90 Dias</option>
+                    <option value="120">120 Dias</option>
+                    <option value="365">365 Dias</option>
+                </select>
+            </div>
+            <div class="card-footer text-center">
+                <button id="calcular_boton" class="btn btn-primary boton-prestamos" type="button">Calcular</button>
             </div>
         </div>
 
+    </form>
+    </div>
 
+    <div class="alert alert-light border-1 border-primary hidden alert-prestamos" id="monto_total" role="alert">
+        <h4 class="alert-heading text-center">¡Usted se encuentra a un paso de solicitar un préstamo en CrediSur!</h4>
+        <p class="text-center"></p>
+        <div class="row justify-content-center align-items-center">
+            <button id="solicitud_prestamo_ok" class="btn btn-primary boton-prestamos w-auto"
+                type="button">Solicitar</button>
+        </div>
+    </div>
 </body>
 
 <footer class="footer-grid">
     <section>
         <article>
             <h2> Seguinos en nuestras Redes!</h2>
-
             <ul class="nav__lista">
                 <li class="lista__links">
-                    <a href="https://www.instagram.com" target="_blank">
-                        <img src="../assets/insta.png" alt="Instagram" width="50px"> </a>
+                    <div class="grow"><a href="https://www.instagram.com" target="_blank">
+                            <img src="../assets/insta.png" alt="Instagram" width="50px"> </a>
+                    </div>
                 </li>
                 <li class="lista__links">
-                    <a href="https://es-la.facebook.com/" target="_blank"> <img src="../assets/facebook.png"
-                            alt="Facebook" width="50px"></a>
+                    <div class="grow"><a href="https://es-la.facebook.com/" target="_blank"> <img
+                                src="../assets/facebook.png" alt="Facebook" width="50px"></a></div>
                 </li>
                 <li class="lista__links">
-                    <a href="https://twitter.com/?lang=es" target="_blank"> <img src="../assets/twitter.png"
-                            alt="Twitter" width="50px"></a>
+                    <div class="grow"><a href="https://twitter.com/?lang=es" target="_blank"> <img
+                                src="../assets/twitter.png" alt="Twitter" width="50px"></a></div>
                 </li>
                 <li class="lista__links">
-                    <a href="https://www.whatsapp.com/?lang=es" target="_blank"> <img src="../assets/wsp.png"
-                            alt="WhatsApp" width="50px"></a>
+                    <div class="grow"><a href="https://www.whatsapp.com/?lang=es" target="_blank"> <img
+                                src="../assets/wsp.png" alt="WhatsApp" width="50px"></a></div>
                 </li>
             </ul>
         </article>
         <articulo>
-            <h6> Desarrollado por Credi-Sur </h6>
+            <h6> © Copyright 2022 CrediSur | Todos los derechos reservados | Comision 44735 | Cordoba, Argentina. </h6>
         </articulo>
     </section>
 </footer>

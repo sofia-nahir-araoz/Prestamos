@@ -6,23 +6,17 @@ function calcular_interes(){
     
     let plazo_devolucion = parseInt (document.getElementById("plazo_devolucion").value);
 
-
-
     let interes_calculado = interes_prestamo (monto_a_solicitar, plazo_devolucion);
-
     let monto_total_html = document.getElementById ("monto_total");
-
     let monto_total = interes_calculado + monto_a_solicitar
 
-    monto_total_html.querySelector ("h6").innerText = "Usted desea solicitar $ "+monto_a_solicitar + " Con un Plazo de Devolución de "+plazo_devolucion+ " dias. El monto total  incluido el interes, seria $" + monto_total + "."
+    monto_total_html.querySelector ("p").innerText = "Usted desea solicitar $ "+monto_a_solicitar + " Con un Plazo de Devolución de "+plazo_devolucion+ " dias. El monto total  incluido el interes, seria $" + monto_total + "."
 
     monto_total_html.style.display = "block";
-
 
 }
 
 function mostar_cartel_solicitud (){
-
 
     swal.fire ({
         icon: "success",
@@ -42,11 +36,6 @@ function mostar_cartel_solicitud (){
         window.location.href ='../index.html';
     },5000);
 }
-
-
-
-
-
 
 function interes_prestamo (monto_solicitado , plazo_devolucion){
 

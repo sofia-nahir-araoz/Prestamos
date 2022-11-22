@@ -10,19 +10,16 @@ class Usuario {constructor (nombre, apellido, dni, nacimiento, mail, telefono, p
 
 }}
 
-/*
+/*CODIGO PARA PRESETEAR USUARIOS EN LOCAL STORAGE
 let usuario1 = new Usuario ("Juan", "Perez", 38383838, "1990-10-10", "juanperez@gmail.com", "155505050", "1234");
 
 let usuario2 = new Usuario ("Maria", "Sanchez", 40404040, "1995-09-12", "mariasanchez@gmail.com", "155202020", "1234");
 
 let usuario3 = new Usuario ("Ana", "Jimenez", 22222222, "1972-04-01", "jimenezana@gmail.com", "155989898", "1234");
 
-
 let usuarios_cargados = [usuario1, usuario2, usuario3];
 
-
 let usuarios_JSON = JSON.stringify(usuarios_cargados);
-
 
 localStorage.setItem("Usuarios", usuarios_JSON);*/
 
@@ -59,7 +56,6 @@ function validar_usuario (){
             }
         })
     
-    
     } 
 
 }
@@ -67,8 +63,6 @@ function validar_usuario (){
 let boton = document.getElementById ("inicio_sesion");
 
 boton.addEventListener("click", validar_usuario);
-
-
 
 
 
@@ -90,8 +84,6 @@ let cotizacion_dolar_oficial = async function(){
         }
     })
 }
-
-
 
 let boton_dolar_oficial = document.getElementById ("dolar_oficial");
 
