@@ -46,7 +46,7 @@ function registro_usuario (){
     else {
         let edad =  new Date().getFullYear() - new Date(nacimiento_ingresado).getFullYear();
 
-        if (edad && (edad <= 65 || edad >= 18)) {
+        if (edad && (edad <= 65 && edad >= 18)) {
 
             let nuevo_usuario = new Usuario (nombre_ingresado,apellido_ingresado,dni_ingresado,nacimiento_ingresado,mail_ingresado, telefono_ingresado,password_ingresado);
 

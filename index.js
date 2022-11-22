@@ -69,7 +69,56 @@ let boton = document.getElementById ("inicio_sesion");
 boton.addEventListener("click", validar_usuario);
 
 
-    
 
 
 
+let cotizacion_dolar_oficial = async function(){
+
+    let resultado = await fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales");
+    let precios_dolar = await resultado.json();
+
+    swal.fire ({
+        icon: "info",
+        title:"Precio Dolar Oficial",
+        text: `Compra: ${precios_dolar[0].casa.compra} - Venta: ${precios_dolar[0].casa.venta}`,
+        footer:"",
+        showClass:{
+            popup:'animate_animated animate_bounceInRigth'
+        },
+        hidenClass:{
+            popup: 'animate_animated animate_hinge'
+        }
+    })
+}
+
+
+
+let boton_dolar_oficial = document.getElementById ("dolar_oficial");
+
+boton_dolar_oficial.addEventListener("click", cotizacion_dolar_oficial);
+
+
+let cotizacion_dolar_blue = async function(){
+
+    let resultado = await fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales");
+    let precios_dolar = await resultado.json();
+
+    swal.fire ({
+        icon: "info",
+        title:"Precio Dolar Blue",
+        text: `Compra: ${precios_dolar[1].casa.compra} - Venta: ${precios_dolar[1].casa.venta}`,
+        footer:"",
+        showClass:{
+            popup:'animate_animated animate_bounceInRigth'
+        },
+        hidenClass:{
+            popup: 'animate_animated animate_hinge'
+        }
+    })
+}
+
+
+
+let boton_dolar_blue = document.getElementById ("dolar_blue");
+
+boton_dolar_blue.addEventListener("click", cotizacion_dolar_blue);

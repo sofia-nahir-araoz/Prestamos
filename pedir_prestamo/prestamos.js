@@ -6,7 +6,7 @@ function calcular_interes(){
     
     let plazo_devolucion = parseInt (document.getElementById("plazo_devolucion").value);
 
-    debugger
+
 
     let interes_calculado = interes_prestamo (monto_a_solicitar, plazo_devolucion);
 

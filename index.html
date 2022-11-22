@@ -4,13 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilos.css">
+
+    <link rel="shortcut icon" href="./assets/pesos.png" type="image/x-icon">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+  
+    <title>Credisur</title>
 </head>
 <body>
-<h1>CREDISUR</h1>
+
+  <div class="banner">
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">
+              <div class="grow"><img src="./assets/pesos.png" width=30px></div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./registro_usuario/registro.html">REGISTRATE</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./pedir_prestamo/prestamo.html">PRESTAMOS</a>
+                  </li>
+
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div>
+    <h1 class="nombre-empresa h1"> CREDISUR</h1>
+</div>
+
+  </div>
+
+
 <h2>Bienvenido/a a CrediSur - Prestamos Personales</h2>
 
 <form>
@@ -31,6 +96,46 @@
         <button onclick= "location.href='./registro_usuario/registro.html'" class="btn btn-primary" type="button">Registarse </button>
       </div>
 
+
+      <section>
+        <h2 class="h2"> Queres saber a cuanto cotiza el dolar hoy? </h2>
+    </section>
+      <article class="conteiner-img-rigth">
+        
+            <p class="font-destacados  text-left"> Hace click y enterate minuto a minuto de la cotizacion mas hablada y buscada en el pais.</p>
+            <div class="img-rigth">
+              <img class="img-index" src="./assets/dolares.jpg" alt="ImagenSalon">
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+              <button id="dolar_oficial" class="btn btn-primary" type="button">DOLAR OFICIAL</button>
+              <button id="dolar_blue" class="btn btn-primary" type="button">DOLAR BLUE</button>
+            </div>
+      </article>
+
+            
+
+
+
+
+
+
+
+
+
+
+
+      <section>
+        <h2 class="h2"> ¿Donde puedes encontrarnos? </h2>
+        <div class="imagenes-centradas">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.588612137032!2d-64.18573208513514!3d-31.42545868140113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28fd643bdeb%3A0x7011caed41fe4756!2sBlvr.%20Chacabuco%20680%2C%20X5000IIT%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1656684464461!5m2!1ses-419!2sar"
+                width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+
+
 </body>
 
 <footer class="footer-grid">
@@ -40,20 +145,20 @@
                   
                   <ul class="nav__lista">
                       <li class="lista__links">
-                          <a href="https://www.instagram.com" target="_blank">
-                              <img src="./assets/insta.png" alt="Instagram" width="50px"> </a>
+                        <div class="grow"><a href="https://www.instagram.com" target="_blank">
+                              <img src="./assets/insta.png" alt="Instagram" width="50px"> </a></div>
                       </li>
                       <li class="lista__links">
-                        <a href="https://es-la.facebook.com/" target="_blank"> <img src="./assets/facebook.png"
-                                alt="Facebook" width="50px"></a>
+                        <div class="grow"><a href="https://es-la.facebook.com/" target="_blank"> <img src="./assets/facebook.png"
+                                alt="Facebook" width="50px"></a></div>
                     </li>
                       <li class="lista__links">
-                          <a href="https://twitter.com/?lang=es" target="_blank"> <img src="./assets/twitter.png"
-                                  alt="Twitter" width="50px"></a>
+                        <div class="grow"><a href="https://twitter.com/?lang=es" target="_blank"> <img src="./assets/twitter.png"
+                                  alt="Twitter" width="50px"></a></div>
                       </li>
                       <li class="lista__links">
-                          <a href="https://www.whatsapp.com/?lang=es" target="_blank"> <img src="./assets/wsp.png"
-                                  alt="WhatsApp" width="50px"></a>
+                        <div class="grow"><a href="https://www.whatsapp.com/?lang=es" target="_blank"> <img src="./assets/wsp.png"
+                                  alt="WhatsApp" width="50px"></a></div>
                       </li>
                   </ul>
       </article>
